@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoC Village Stats</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header ma title ra player tag -->
+        <div class="header">
+            <h1>Clash of Clans Village Stats</h1>
+            <div class="player-tag" id="playerTag"></div>
+        </div>
+
+        <!-- Main content: Town Hall ra Heroes -->
+        <div class="main-content">
+            <!-- Town Hall section -->
+            <div class="section-title">Town Hall</div>
+            <div class="townhall-info">
+                <div class="townhall-level" id="townhallLevel"></div>
+            </div>
+
+            <!-- Heroes section -->
+            <div class="section-title">Heroes</div>
+            <div class="heroes-grid" id="heroesGrid"></div>
+        </div>
+
+        <!-- Buttons: different stats dekhaunalai -->
+        <div class="buttons-container">
+            <button class="stats-button" onclick="toggleSection('buildings')">Show Building Stats</button>
+            <button class="stats-button" onclick="toggleSection('troops')">Show Troops Stats</button>
+            <button class="stats-button" onclick="toggleSection('spells')">Show Spells Stats</button>
+        </div>
+
+        <!-- Buildings section: hidden initially -->
+        <div id="buildings" class="stats-section">
+            <div class="section-title">Buildings</div>
+            <div class="items-grid" id="buildingsGrid"></div>
+            <button class="close-button" onclick="toggleSection('buildings')">Close</button>
+        </div>
+
+        <!-- Troops section: hidden initially -->
+        <div id="troops" class="stats-section">
+            <div class="section-title">Troops</div>
+            <div class="items-grid" id="troopsGrid"></div>
+            <button class="close-button" onclick="toggleSection('troops')">Close</button>
+        </div>
+
+        <!-- Spells section: hidden initially -->
+        <div id="spells" class="stats-section">
+            <div class="section-title">Spells</div>
+            <div class="items-grid" id="spellsGrid"></div>
+            <button class="close-button" onclick="toggleSection('spells')">Close</button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-text">&copy; 2024 Sandesh. All rights reserved.</div>
+        </div>
+    </div>
+
+    <script src="Script/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://images5.alphacoders.com/133/thumb-1920-1330735.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* Container - sabai content yaha bhitra hunxa */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    text-align: center;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    margin: 30px 0 30px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: none;
+}
+
+.player-tag {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+}
+
+/* Main content area: Town Hall ra Heroes dekhauxa */
+.main-content {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px 0 20px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Town Hall display */
+.townhall-info {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 4px solid rgba(255, 255, 255, 0.5);
+}
+
+.townhall-level {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.townhall-text {
+    font-size: 2.5em;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    flex: 1;
+}
+
+.townhall-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Heroes grid */
+.heroes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-card:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Hero image styling */
+.hero-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.hero-name {
+    color: #fff;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.hero-level {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.hero-upgrading {
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 5px;
+    opacity: 0.9;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Buttons container */
+.buttons-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.stats-button {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    padding: 15px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.stats-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.stats-button:active {
+    transform: scale(0.98);
+}
+
+/* Hidden sections: button click paxi dekhine */
+.stats-section {
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.stats-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Items grid: troops, spells, buildings ko lagi */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.item-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.item-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.item-name {
+    color: #fff;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.item-level {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.item-count {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.item-timer {
+    color: #fff;
+    font-size: 0.85em;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.close-button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 10px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1em;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.close-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive design*/
+@media (max-width: 768px) {
+    .header {
+        margin: 0 0 20px 0;
+        padding: 30px 20px;
+    }
+    
+    .header h1 {
+        font-size: 2em;
+    }
+    
+    .player-tag {
+        font-size: 1em;
+    }
+    
+    .heroes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .buttons-container {
+        flex-direction: column;
+    }
+    
+    .stats-button {
+        width: 100%;
+    }
+}
+
+/* Footer section */
+.footer {
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    backdrop-filter: blur(10px);
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
